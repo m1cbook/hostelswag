@@ -1,25 +1,26 @@
-// ----- ГОЛОВНА СТОРІНКА ----- 
-const video = document.getElementById('myVideo');
-
-if (video) {
-    // Перевіряємо, чи не потрібно пропускати відтворення
-    const skipVideo = localStorage.getItem('skipVideo');
-
-    if (!skipVideo) {
-        video.play().catch(err => console.log('Відео не змогло відтворитись автоматично:', err));
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Головна сторінка ---
+    const video = document.getElementById('myVideo');
+    if (video) {
+        const skipVideo = localStorage.getItem('skipVideo');
+        if (!skipVideo) {
+            // пробуємо відтворити відео
+            video.play().catch(err => console.log('Авто-відтворення не спрацювало:', err));
+        }
+        // скидаємо прапорець після завантаження
+        localStorage.removeItem('skipVideo');
     }
 
-    // Скидаємо прапорець після завантаження
-    localStorage.removeItem('skipVideo');
-}
-
-// ----- ІНША СТОРІНКА ----- 
-const goHomeLink = document.getElementById('goHomeLink');
-
-if (goHomeLink) {
-    goHomeLink.addEventListener('click', function(e) {
-        e.preventDefault(); // спершу ставимо прапорець
-        localStorage.setItem('skipVideo', 'true');
-        window.location.href = goHomeLink.href;
-    });
-}
+    // --- Інша сторінка ---
+    const goHomeLink = document.getElementById('goHomeLink');
+    if (goHomeLink) {
+        goHomeLink.addEventListener('click', function(e) {
+            e.preventDefault(); // спершу ставимо прапорець
+            localStorage.setItem('skipVideo', 'true');
+            // невелика затримка для запису в localStorage
+            setTimeout(() => {
+                window.location.href = goHomeLink.href;
+            }, 50);
+        });
+    }
+});
