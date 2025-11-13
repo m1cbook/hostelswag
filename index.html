@@ -10,7 +10,7 @@
     <!-- === Відео-оверлей === -->
     <div id="video-overlay">
       <div class="video-container">
-        <video id="promo-video" controls autoplay muted>
+        <video id="myVideo" controls autoplay muted>
           <source src="assets/clip.mp4" type="video/mp4" />
           Твій браузер не підтримує відео.
         </video>
@@ -119,25 +119,7 @@
         </div>
       </section>
     </main>
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const overlay = document.getElementById("video-overlay");
-      const closeBtn = document.getElementById("close-video");
-
-      // Відео показуємо автоматично
-      overlay.style.display = "flex";
-
-      // Закриття відео
-      function closeVideo() {
-        overlay.style.display = "none";
-      }
-
-      closeBtn.addEventListener("click", closeVideo);
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeVideo();
-      });
-    });
-  </script>
+    <script src="main.js"></script>
 
     <footer class="footer">
       <div class="container">© Демо — це не погано, це початок чогось</div>
