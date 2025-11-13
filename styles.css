@@ -67,7 +67,7 @@ a button {
 /* HERO */
 .hero{
   min-height:75vh;
-  background-image: url("/assets/hero.jpg");
+  background-image: url("assets/hero.jpg");
   background-size:cover;
   background-position:center;
   display:flex;
