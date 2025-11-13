@@ -1,0 +1,156 @@
+/* базовий ресет */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
+    sans-serif;
+}
+.logo {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #ffffff;
+}
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #103f47;
+}
+
+/* фон у стилі iOS 26 */
+body {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #111;
+  padding: 2rem 1rem;
+  overflow-x: hidden;
+}
+
+.background {
+  position: fixed;
+  inset: -20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  filter: blur(17px) brightness(0.9);
+  z-index: -1;
+}
+
+.headero {
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 31px 60px;
+  background: transparent;
+  box-shadow: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  position: fixed;
+}
+
+/* заголовок */
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  color: #111;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 0.8rem 3.2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* контейнер */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* карточка товару */
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* текстова частина */
+.info {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.info p {
+  font-size: 0.9rem;
+  color: #222;
+  opacity: 0.8;
+  margin-bottom: 0.8rem;
+}
+
+/* фото */
+.product img {
+  width: 100px;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* кнопка */
+.buy-btn {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.25);
+  color: #111;
+  text-decoration: none;
+  padding: 0.45rem 1.2rem;
+  border-radius: 14px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  transition: all 0.25s ease;
+}
+
+.buy-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}

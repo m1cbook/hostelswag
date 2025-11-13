@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+.headero {
+  max-width: 1703px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 31px 60px;
+  background: transparent;
+  box-shadow: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  position: fixed;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #ffffff;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #103f47;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
+    sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* --- Фон із фото в HTML --- */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0px;
+  z-index: 0;
+  filter: brightness(0.3) blur(3px);
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.background a img {
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.background a img:hover {
+  filter: brightness(0.8);
+}
+
+/* --- Контейнер контактів --- */
+.contacts {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  padding: 3rem;
+  border-radius: 12px;
+}
+
+.contacts h1 {
+  font-size: 2.4rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.contacts ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.contacts li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.contacts li i {
+  font-size: 1.6rem;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.contacts li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.contacts li:hover i,
+.contacts li:hover a {
+  color: #fff;
+}
